@@ -12,7 +12,7 @@
 Black Maria is a Python library for web scraping any webpage using natural language.
 
 ### How to use Black Maria?
-Black Maria uses guardrails https://github.com/ShreyaR/guardrails. Guardrails are a set of instructions that tell the LLM what the output should look like. 
+Black Maria uses [guardrails](https://github.com/ShreyaR/guardrails). Guardrails are a set of instructions that tell the LLM what the output should look like. 
 
 ```python
 from blackmaria import maria
