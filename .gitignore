@@ -1,0 +1,6 @@
+.env
+venv
+venv/bin
+__pycache__
+guardrails.log
+.gitattributes
