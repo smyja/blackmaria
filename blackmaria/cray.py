@@ -150,7 +150,7 @@ class BeautifulSoupWebReader(BaseReader):
             extra_info = {"URL": url}
             if hostname in self.website_extractor:
                 data, metadata = self.website_extractor[hostname](soup, url,include_url_in_text)
-                print(metadata)
+                # print(metadata)
                 extra_info.update(metadata)
 
             else:

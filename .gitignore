@@ -4,3 +4,7 @@ venv/bin
 __pycache__
 guardrails.log
 .gitattributes
+build/*
+dist/*
+blackmaria.egg-info/*
+fandom.json
