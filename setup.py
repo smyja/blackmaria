@@ -6,6 +6,8 @@ DESCRIPTION = "Scraping webpages with natural language"
 URL = "https://github.com/smyja/blackmaria"
 EMAIL = "akpobimaro@gmail.com"
 AUTHOR = "Maro Akpobi"
+with open("README.md", "r") as fh:
+    description = fh.read()
 setup(
     name=NAME,
     version='0.1',
@@ -14,7 +16,8 @@ setup(
     license='MIT',
     author=AUTHOR,
     author_email=EMAIL,
-    
+    long_description=description,
+    long_description_content_type="text/markdown",
     install_requires=[
         'bs4',
         'python-dotenv',
