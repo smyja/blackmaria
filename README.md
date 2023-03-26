@@ -40,4 +40,37 @@ query="provide details about the movie,summary,cast,cast.starring,cast.guest_sta
 query_response=maria.night_crawler(url=url,spec=spec,query=query)
 print(query_response)
 
+
+```
+### Output
+```json
+{
+  "movie": {
+    "summary": "As the teens get their bearings among the wreckage, Misty finds hell on earth quite becoming. In the present: revenge, sex homework and the policeman formerly known as Goth.",
+    "cast": {
+      "starring": [
+        "Lottie Matthews",
+        "Vanessa Palmer",
+        "Misty Quigley",
+        "Shauna Sadecki",
+        "Natalie Scatorccio",
+        "Taissa Turner"
+      ],
+      "guest_starring": [
+        "Akilah",
+        "Laura Lee",
+        "Mari",
+        "Adam Martin",
+        "Javi Martinez",
+        "Travis Martinez",
+        "Jessica Roberts",
+        "Jeff Sadecki",
+        "Ben Scott",
+        "Jackie Taylor"
+      ],
+      "co-starring": ["Kevyn Tan", "Simone"]
+    }
+  }
+}
+
 ```
