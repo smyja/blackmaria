@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
     description = fh.read()
 setup(
     name=NAME,
-    version='0.1',
+    version='0.1.1',
     packages=find_packages(),
     url= URL,
     license='MIT',
