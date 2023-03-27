@@ -22,7 +22,44 @@ spec=("""
     <rail version="0.1">
 
     <output>
+        <object name="movie" format="length: 2">
+            <string
+                name="summary"
+                description="the summary section of the movie"
+                format="length: 200 240"
+                on-fail-length="noop"
+            />
+            <object name="cast" description="The cast in the movie" format="length: 3">
+            <list name="starring">
+        
+                <string format="two-words"
+                on-fail-two-words="reask"
+                description="The starring section for the movie and roles"
+        
+                
+                />
+            </list>
+            <list name="guest_starring">
+            
+            <string format="two-words"
+                on-fail-two-words="reask"
+                description="The Guest starring section and roles"
+                />
+            </list>
+            <list name="co-starring">
+            
+            <string format="two-words"
+                on-fail-two-words="reask"
+                description="the starring section"
+                />
+            </list>
+            
+            </object>
+
+
+        </object>
     </output>
+
 
     <prompt>
 
