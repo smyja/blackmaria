@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
     description = fh.read()
 setup(
     name=NAME,
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(),
     url= URL,
     license='MIT',
@@ -21,8 +21,8 @@ setup(
     install_requires=[
         'bs4',
         'python-dotenv',
-        "guardrails-ai",
-        "gpt_index"
+        "guardrails-ai==0.1.4",
+        "gpt-index==0.4.39"
     ],
     
 )
