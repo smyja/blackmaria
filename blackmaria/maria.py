@@ -13,12 +13,13 @@ from gpt_index import (GPTSimpleVectorIndex, PromptHelper,
 from gpt_index.prompts.prompts import QuestionAnswerPrompt, RefinePrompt
 from gpt_index.prompts.default_prompts import DEFAULT_TEXT_QA_PROMPT_TMPL, DEFAULT_REFINE_PROMPT_TMPL
 from gpt_index.output_parsers import GuardrailsOutputParser
-from gpt_index.llm_predictor import StructuredLLMPredictor
-llm_predictor = StructuredLLMPredictor()
+from gpt_index.llm_predictor import StructuredLLMPredictor, LLMPredictor
+from langchain.chat_models import ChatOpenAI
+llm_predictor = StructuredLLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
 # llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="text-curie-001"))
-from .cray import BeautifulSoupWebReader
+from blackmaria.cray import BeautifulSoupWebReader
 
-def night_crawler(url: str, spec,query):
+def night_crawler(url: str,spec,query):
 
     loader = BeautifulSoupWebReader()
     max_input_size = 4096
@@ -61,6 +62,7 @@ def night_crawler(url: str, spec,query):
 
     qa_prompt = QuestionAnswerPrompt(fmt_qa_tmpl, output_parser=output_parser)
     refine_prompt = RefinePrompt(fmt_refine_tmpl, output_parser=output_parser)
+    # llm_predictor_gpt4 = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
     response = index.query(
         query_str=query,
         text_qa_template=qa_prompt, 

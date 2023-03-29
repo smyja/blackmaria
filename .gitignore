@@ -8,3 +8,5 @@ build/*
 dist/*
 blackmaria.egg-info/*
 fandom.json
+u.py
+test
