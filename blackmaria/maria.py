@@ -31,7 +31,7 @@ def night_crawler(url: str, spec,query):
     documents = loader.load_data(urls=[url])
     base_url = url
     parsed_url = urlparse(base_url)
-    filename = parsed_url.netloc.split(".")[1]
+    filename = url # parsed_url.netloc.split(".")[1]
 
     # save to disk
     if not os.path.exists(os.path.join(os.getcwd(), filename + ".json")):
