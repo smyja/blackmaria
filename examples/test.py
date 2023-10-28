@@ -8,7 +8,7 @@ spec=("""
     <object name="movie" format="length: 2">
         <string
             name="summary"
-            description="the summary section of the movie"
+            description="the exact summary section of the movie"
             format="length: 200 240"
             on-fail-length="noop"
         />
@@ -56,6 +56,6 @@ spec=("""
     </prompt>
     </rail>
     """)
-query="provide details about the movie,summary,cast,cast.starring,cast.guest_starring,cast.co-starring"
-query_response=maria.night_crawler(url=url,spec=spec,query=query)
+query="scrape exact summary,cast and more from the text above"
+query_response=maria.night_crawler(url,spec,query)
 print(query_response)
