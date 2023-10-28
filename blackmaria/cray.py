@@ -139,6 +139,7 @@ class BeautifulSoupWebReader(BaseReader):
         for url in urls:
             try:
                 page = requests.get(url)
+                
             except Exception:
                 raise ValueError(f"One of the inputs is not a valid url: {url}")
 

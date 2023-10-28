@@ -68,6 +68,7 @@ def night_crawler(url: str,spec,query):
         text_qa_template=qa_prompt, 
         refine_template=refine_prompt, 
         llm_predictor=llm_predictor,
+        
     
     )
     return response

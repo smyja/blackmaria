@@ -36,6 +36,6 @@ spec=("""
     </prompt>
     </rail>
     """)
-query="scrape exact summary,cast and more from the text above"
+query="get the title and summary of the movie/tvshow"
 query_response=maria.night_crawler(url,spec,query)
 print(query_response)
